@@ -1,0 +1,40 @@
+.container{
+    position: relative;
+    overflow: hidden;
+    .image_slider{
+        display: flex;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory; //强制在橫軸上吸附
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        scroll-snap-align: stretch;
+    }
+}
+.nav_section{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0.5;
+    color: #fff;
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    .slider-button{
+        display: flex;
+        width: 10px;
+        height: 10px;
+        background-color:#fff;
+        text-decoration: none;
+        border-radius:50%;
+        margin: 5px; 
+    }
+    .slider-button-selection{
+        background-color: #f40;
+    }
+}

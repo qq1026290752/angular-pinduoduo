@@ -1,5 +1,5 @@
-import { Component } from '@angular/core'
-import { TopMenu } from './components';
+import { Component, ViewChildren } from '@angular/core';
+import { TopMenu, ImageSlider, ImageSliderComponent } from './components';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,10 @@ import { TopMenu } from './components';
 })
 export class AppComponent {
   title = 'pingduoduo';
-  topMenus:TopMenu[] = [
+  @ViewChildren(ImageSliderComponent) imageSlider: ImageSliderComponent;
+
+
+  topMenus: TopMenu [] = [
     {
       title: '热门',
       link: ''
@@ -76,6 +79,38 @@ export class AppComponent {
     {
       title: '家具',
       link: ''
+    }
+  ];
+  imageSliders: ImageSlider[] = [
+    {
+      imgUrl:
+        'https://media.istockphoto.com/photos/morning-jogging-picture-id497687118',
+      link: '',
+      caption: ''
+    },
+    {
+      imgUrl:
+        'https://media.istockphoto.com/photos/listening-the-music-picture-id508949258',
+      link: '',
+      caption: ''
+    },
+    {
+      imgUrl:
+        'https://media.istockphoto.com/photos/pretty-young-teenage-girl-relaxing-on-a-grass-picture-id521982322',
+      link: '',
+      caption: ''
+    },
+    {
+      imgUrl:
+        'https://media.istockphoto.com/photos/beautiful-women-working-out-in-gym-picture-id623680490',
+      link: '',
+      caption: ''
+    },
+    {
+      imgUrl:
+        'https://media.istockphoto.com/photos/jogging-with-my-best-friend-picture-id850045040',
+      link: '',
+      caption: ''
     }
   ];
 
