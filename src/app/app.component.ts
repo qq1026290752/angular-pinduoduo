@@ -1,11 +1,5 @@
-import { Component } from '@angular/core';
-
-interface TopMenu {
-  title:string;
-  readonly link?:string;//只读 可以为空
-}
-
-
+import { Component } from '@angular/core'
+import { TopMenu } from './components';
 
 @Component({
   selector: 'app-root',
@@ -14,8 +8,7 @@ interface TopMenu {
 })
 export class AppComponent {
   title = 'pingduoduo';
-  selectedIndex:number = -1;
-  menus:TopMenu[] = [
+  topMenus:TopMenu[] = [
     {
       title: '热门',
       link: ''
@@ -85,4 +78,9 @@ export class AppComponent {
       link: ''
     }
   ];
+
+
+  handleTabSelection(tobMenu:TopMenu){
+      console.log(tobMenu);
+  }
 }

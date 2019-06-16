@@ -1,7 +1,8 @@
-<ul>
-  <li *ngFor="let item of menus;let i = index; trackBy:item.title?item.title:null">
-    <a href="#" [class.active]='i == selectedIndex' (click)="selectedIndex = i">
-      {{ item.title }}
-    </a>
-  </li> 
-</ul>  
+<app-scrollable-tab 
+    [menus]="topMenus"
+    (tabSelection)="handleTabSelection($event);"
+    titleColor="#000"
+    [activeColor]="'#f40'"
+    [indicatorColor]="'#09c'"
+>
+</app-scrollable-tab>
