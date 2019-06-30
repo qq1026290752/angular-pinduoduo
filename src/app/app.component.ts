@@ -1,5 +1,5 @@
 import { Component, ViewChildren } from '@angular/core';
-import { TopMenu, ImageSlider, ImageSliderComponent } from './components';
+import { TopMenu, ImageSlider, ImageSliderComponent } from './shared/components';
 
 @Component({
   selector: 'app-root',
@@ -84,7 +84,7 @@ export class AppComponent {
   imageSliders: ImageSlider[] = [
     {
       imgUrl:
-        'https://media.istockphoto.com/photos/morning-jogging-picture-id497687118',
+        'https://media.istockphoto.com/photos/abstract-science-circle-global-network-connection-in-hands-on-sunset-picture-id672310452',
       link: '',
       caption: ''
     },
@@ -115,7 +115,7 @@ export class AppComponent {
   ];
 
 
-  handleTabSelection(tobMenu:TopMenu){
+  handleTabSelection(tobMenu: TopMenu) {
       console.log(tobMenu);
   }
 }
