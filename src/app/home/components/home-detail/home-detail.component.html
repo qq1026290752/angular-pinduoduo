@@ -1,0 +1,10 @@
+<app-image-slider 
+    [sliders]="imageSliders" 
+    [sliderHeight]="'160px'">
+</app-image-slider>
+<app-horizontal-grid>
+    <div appGridItem *ngFor="let item of channels">
+        <img [src]="item.icon" alt="" [appGridItemImage]="'2rem'">
+        <span appGridItemTitle = '0.6rem'>{{item.title}}</span>
+    </div>
+</app-horizontal-grid>

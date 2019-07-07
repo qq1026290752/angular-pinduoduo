@@ -1,12 +1,11 @@
-import { Directive, ElementRef, Renderer2, Input, OnInit } from '@angular/core';
+import { Directive, ElementRef, Renderer2, Input, OnInit, HostBinding } from '@angular/core';
 
 @Directive({
   selector: '[appGridItemTitle]'
 })
-export class GridItemTitleDirective implements OnInit {
-  ngOnInit(): void {
-    this.rd2.setStyle(this.elr.nativeElement, 'grid-area', 'title' );
-  }
-  constructor(private elr:ElementRef, private rd2:Renderer2) {}
+export class GridItemTitleDirective {
+
+  @HostBinding('style.grid-area') gridArea = 'title';
+  @HostBinding('style.font-size') @Input() appGridItemTitle = '12px';
 
 }

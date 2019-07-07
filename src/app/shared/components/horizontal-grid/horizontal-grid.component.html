@@ -1,4 +1,11 @@
-<div appGridItem *ngFor="let item of channels">
-  <img [src]="item.icon" alt="" [appGridItemImage]="'2rem'">
-  <span appGridItemTitle>{{item.title}}</span>
+<div class="container" 
+    [ngStyle]="{
+      'grid-template-rows': templateRows,
+      'grid-template-columns': templateColumns
+    }"
+    (scroll)="handelScroll($event)">
+    <ng-content></ng-content>
+</div>
+<div class="underline" *ngIf="scrollable">
+  <div class="highlight" [ngStyle]="{'margin': sliderMargin}"></div>
 </div>

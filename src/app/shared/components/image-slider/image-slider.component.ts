@@ -41,7 +41,7 @@ export class ImageSliderComponent implements OnInit, OnDestroy, AfterViewInit {
     this.intervalId = setInterval(() => {
       this.rd2.setProperty(this.imageSlider.nativeElement ,
          'scrollLeft' ,
-          (this.getIndex(++this.selectedIndex) * this.imageSlider.nativeElement.scrollWidth) / this.sliders.length)
+          (this.getIndex(++this.selectedIndex) * this.imageSlider.nativeElement.scrollWidth) / this.sliders.length);
     }, this.IntervalByTimeSecond * 1000);
   }
 
